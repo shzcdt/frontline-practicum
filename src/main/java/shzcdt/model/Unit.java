@@ -1,7 +1,7 @@
-package model;
+package shzcdt.model;
 
 
-import type.UnitType;
+import shzcdt.type.UnitType;
 
 public class Unit {
     private Long id;

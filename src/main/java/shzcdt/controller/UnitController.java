@@ -1,13 +1,13 @@
-package controller;
+package shzcdt.controller;
 
 
-import model.Hex;
-import model.Unit;
+import shzcdt.model.Hex;
+import shzcdt.model.Unit;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import service.MovementService;
-import type.TerrainType;
-import type.UnitType;
+import shzcdt.service.MovementService;
+import shzcdt.type.TerrainType;
+import shzcdt.type.UnitType;
 
 @RestController
 @RequestMapping("/api/units")
@@ -20,9 +20,9 @@ public class UnitController {
 
     @PostMapping("/{unitId}/move")
     public ResponseEntity<String> moveUnit(
-            @PathVariable Long unitId,
-            @RequestParam int q,
-            @RequestParam int r) {
+            @PathVariable("unitId") Long unitId,
+            @RequestParam("q") int q,
+            @RequestParam("r") int r) {
 
         Unit unit = new Unit(unitId, "TestUnit", 100, 10, 5, UnitType.INFANTRY);
 

@@ -1,7 +1,7 @@
-package service;
+package shzcdt.service;
 
-import model.Hex;
-import model.Unit;
+import shzcdt.model.Hex;
+import shzcdt.model.Unit;
 
 
 public interface MovementService {

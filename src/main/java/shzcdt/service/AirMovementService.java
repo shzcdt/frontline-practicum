@@ -1,9 +1,9 @@
-package service;
+package shzcdt.service;
 
-import model.Hex;
-import model.Unit;
+import shzcdt.model.Hex;
+import shzcdt.model.Unit;
 import org.springframework.stereotype.Service;
-import type.UnitType;
+import shzcdt.type.UnitType;
 
 
 @Service

@@ -1,4 +1,4 @@
-package type;
+package shzcdt.type;
 
 public enum TerrainType {
     FIELD,

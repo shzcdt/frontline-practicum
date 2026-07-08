@@ -1,11 +1,13 @@
-package service;
+package shzcdt.service;
 
-import model.Hex;
-import model.Unit;
+import org.springframework.context.annotation.Primary;
+import shzcdt.model.Hex;
+import shzcdt.model.Unit;
 import org.springframework.stereotype.Service;
-import type.TerrainType;
-import type.UnitType;
+import shzcdt.type.TerrainType;
+import shzcdt.type.UnitType;
 
+@Primary
 @Service
 public class GroundMovementService implements MovementService {
 

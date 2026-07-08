@@ -1,7 +1,7 @@
-package model;
+package shzcdt.model;
 
 
-import type.TerrainType;
+import shzcdt.type.TerrainType;
 
 public class Hex {
     private Long id;
