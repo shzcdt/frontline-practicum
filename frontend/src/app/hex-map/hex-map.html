@@ -1,0 +1,19 @@
+<div class="hex-map-container">
+  <h2>Гексагональная карта</h2>
+  <div class="hex-map">
+    @for (hex of hexes; track hex.q) {
+    <app-hex-cell
+      [hex]="hex"
+      [unit]="getUnitAtHex(hex)"
+      [isSelected]="isUnitSelected(hex)"
+      (hexClick)="onHexClick($event)"
+      (unitClick)="onUnitClick($event)">
+    </app-hex-cell>
+    }
+  </div>
+  <app-unit-panel [unit]="selectedUnit"></app-unit-panel>
+  <div class="info-panel">
+    <p>Выбранный юнит: {{ selectedUnit?.name || 'Нет' }}</p>
+    <p>Кликните на юнита для выбора, затем на гекс для перемещения</p>
+  </div>
+</div>

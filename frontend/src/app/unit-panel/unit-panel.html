@@ -1,0 +1,16 @@
+@if (unit) {
+<div class="unit-panel">
+  <h3>{{ unit?.name }}</h3>
+  <div class="unit-info">
+    <p><strong>Тип:</strong> {{ unit?.type }}</p>
+    <p><strong>HP:</strong> {{ unit?.hp }}</p>
+    <p><strong>Атака:</strong> {{ unit?.attack }}</p>
+    <p><strong>Защита:</strong> {{ unit?.defense }}</p>
+    <p><strong>Позиция:</strong> ({{ unit?.q }}, {{ unit?.r }})</p>
+  </div>
+</div>
+} @else {
+<div class="unit-panel empty">
+  <p>Выберите юнита на карте</p>
+</div>
+}

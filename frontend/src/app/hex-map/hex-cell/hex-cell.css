@@ -1,0 +1,46 @@
+.hex-cell {
+  position: absolute;
+  width: 70px;
+  height: 60px;
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  border: 2px solid #333;
+}
+.hex-cell:hover {
+  transform: scale(1.1);
+  z-index: 10;
+}
+.hex-cell.selected {
+  border: 3px solid #FFD700;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+.hex-cell.has-unit {
+  cursor: pointer;
+}
+.hex-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.coordinates {
+  font-size: 10px;
+  color: #333;
+  margin-bottom: 5px;
+}
+.unit {
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.unit:hover {
+  transform: scale(1.2);
+}
+.unit.air {
+  color: #4169E1;
+}

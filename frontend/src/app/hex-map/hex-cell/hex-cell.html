@@ -1,0 +1,18 @@
+<div class="hex-cell"
+     [style.left]="hexStyle.left"
+     [style.top]="hexStyle.top"
+     [style.backgroundColor]="hexStyle.backgroundColor"
+     [class.selected]="isSelected"
+     [class.has-unit]="unit"
+     (click)="onHexClick()">
+  <div class="hex-content">
+    <span class="coordinates">({{ hex.q }}, {{ hex.r }})</span>
+    @if (unit) {
+    <div class="unit"
+         [class.air]="unit?.type === 'AIR'"
+         (click)="onUnitClick(); $event.stopPropagation()">
+      {{ unit?.type === 'AIR' ? '✈' : '♟' }}
+    </div>
+    }
+  </div>
+</div>
