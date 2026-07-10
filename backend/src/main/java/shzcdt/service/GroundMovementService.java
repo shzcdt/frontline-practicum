@@ -1,14 +1,12 @@
 package shzcdt.service;
 
-import org.springframework.context.annotation.Primary;
+import org.springframework.stereotype.Component;
 import shzcdt.model.Hex;
 import shzcdt.model.Unit;
-import org.springframework.stereotype.Service;
 import shzcdt.type.TerrainType;
 import shzcdt.type.UnitType;
 
-@Primary
-@Service
+@Component("groundMovementService")
 public class GroundMovementService implements MovementService {
 
     @Override
